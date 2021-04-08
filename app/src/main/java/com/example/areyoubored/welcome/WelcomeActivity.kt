@@ -1,10 +1,12 @@
 package com.example.areyoubored.welcome
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatSpinner
 import androidx.core.content.ContextCompat
+import com.example.areyoubored.MainActivity
 import com.example.areyoubored.R
 import com.example.areyoubored.ui.dashboard.RandomFragment
 import kotlinx.android.synthetic.main.activity_welcome.*
@@ -52,13 +54,10 @@ class WelcomeActivity : AppCompatActivity() {
 
         }
 
-       /* startButton.setOnClickListener {
-            val fragmentManager = supportFragmentManager
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.welcome_container, RandomFragment())   //TODO here
-            fragmentTransaction.commit()
-        }*/
+        startButton.setOnClickListener {
+           val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
