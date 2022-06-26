@@ -1,1 +1,3 @@
-The app you wish you had yesterday
+# Are You Bored
+
+## This project was created for practice purposes.
